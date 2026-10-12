@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#13171d">
+  <meta name="description" data-i18n-content="description" content="BMD is a bookmark manager built for Chrome. Let an Agent help manage and add tags.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" data-i18n-content="ogLocale" content="en_US">
+  <meta property="og:site_name" content="BMD・bookmarkdown">
+  <meta property="og:title" data-i18n-content="title" content="BMD・bookmarkdown | More after saving">
+  <meta property="og:description" data-i18n-content="ogDescription" content="Your bookmarks. A new possibility. Built for Chrome, with an Agent to help you organize.">
+  <meta property="og:image" content="/og-bmd.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/src/styles/tokens.css">
+  <link rel="stylesheet" href="/src/styles/landing.css">
+  <title data-i18n="title">BMD・bookmarkdown | More after saving</title>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#content" data-i18n="skip">Skip to main content</a>
+  <noscript><p class="noscript-note">JavaScript is needed for the interactive demo. Product information is still available.</p></noscript>
+  <header class="topnav">
+    <div class="container topnav-inner">
+      <a class="logo" href="#top" data-i18n-aria-label="home" aria-label="BMD bookmarkdown, back to top">
+        <i class="brand-mark" data-lucide="bookmark" aria-hidden="true"></i>
+        <strong>BMD</strong><span>bookmarkdown</span>
+      </a>
+      <nav data-i18n-aria-label="navigation" aria-label="Main navigation">
+        <a href="#clues" data-i18n="navClues">About BMD</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="nav-preview" href="#preview"><span data-i18n="navPeek">Preview</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+        <label class="language-picker" hidden>
+          <i data-lucide="languages" aria-hidden="true"></i>
+          <select id="language-select" data-i18n-aria-label="language" aria-label="Language">
+            <option value="auto" data-i18n="automatic">Auto</option>
+            <option value="en" lang="en">English</option>
+            <option value="zh-Hant" lang="zh-Hant">繁體中文</option>
+            <option value="zh-Hans" lang="zh-Hans">简体中文</option>
+          </select>
+        </label>
+      </div>
+    </div>
+  </header>
+  <main id="content">
+    <section class="section hero" id="top">
+      <div class="container hero-center">
+        <p class="eyebrow hero-eyebrow"><span class="signal-dot" aria-hidden="true"></span><span data-i18n="heroStatus">Chrome × Agent × Tags</span></p>
+        <h1><span class="hero-brand">BMD・bookmarkdown</span><span data-i18n="heroFirst">Your bookmarks.</span><br><span class="quiet" data-i18n="heroSecond">A new possibility.</span></h1>
+        <p class="lead"><span data-i18n="heroDescriptionFirst">BMD is a bookmark manager built for Chrome.</span><br><span data-i18n="heroDescriptionSecond">Let an Agent help manage and add tags.</span></p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#preview"><span data-i18n="peek">Take a peek</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <a class="btn btn-ghost" href="#clues" data-i18n="readClues">Meet BMD</a>
+        </div>
+      </div>
+      <div class="container preview-wrap" id="preview">
+        <div class="preview-caption"><span data-i18n="previewCaption">BMD bookmark workspace</span><span class="meta" data-i18n="previewDisclaimer">Interactive concept / Sample data</span></div>
+        <div class="product-window">
+          <div class="window-bar">
+            <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+            <span class="window-title"><i data-lucide="bookmark" aria-hidden="true"></i><span data-i18n="workspace">BMD / Bookmark workspace</span></span>
+            <span class="meta" data-i18n="preview">Preview</span>
+          </div>
+          <div class="preview-layout">
+            <aside class="preview-sidebar" data-i18n-aria-label="filters" aria-label="Sample bookmark filters">
+              <p class="workspace-label" data-i18n="collection">My collection</p>
+              <button type="button" class="sidebar-btn" aria-pressed="true" data-filter="all"><i data-lucide="bookmark" aria-hidden="true"></i><span data-i18n="allBookmarks">All bookmarks</span></button>
+              <button type="button" class="sidebar-btn" aria-pressed="false" data-filter="development"><i data-lucide="tag" aria-hidden="true"></i><span data-i18n="tags.development">Development</span></button>
+              <button type="button" class="sidebar-btn" aria-pressed="false" data-filter="reference"><i data-lucide="tag" aria-hidden="true"></i><span data-i18n="tags.reference">Reference</span></button>
+              <hr class="sidebar-rule">
+              <p class="sidebar-foot"><span data-i18n="sidebarFirst">Save what you love.</span><br><span data-i18n="sidebarSecond">Find the connections later.</span></p>
+            </aside>
+            <div class="bookmark-library">
+              <div class="library-header"><h2 id="library-title">All bookmarks</h2><span class="meta" id="bookmark-count" aria-live="polite">3 samples</span></div>
+              <div class="search-box">
+                <i data-lucide="search" aria-hidden="true"></i>
+                <input class="input" type="search" id="bookmark-search" data-i18n-placeholder="searchPlaceholder" data-i18n-aria-label="searchLabel" placeholder="Search bookmarks or tags…" aria-label="Search sample bookmarks or tags" autocomplete="off">
+              </div>
+              <div class="bookmark-list" id="bookmark-list">
+                <article class="bookmark-row" data-bookmark="mdn">
+                  <div class="bookmark-top"><span class="bookmark-symbol" aria-hidden="true"><i data-lucide="bookmark"></i></span><div class="bookmark-text"><a data-i18n-href="links.mdn" href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener noreferrer">MDN Web Docs <i data-lucide="arrow-up-right" aria-hidden="true"></i></a><p class="bookmark-domain">developer.mozilla.org</p></div></div>
+                  <div class="bookmark-tags" data-tags-for="mdn"></div>
+                </article>
+                <article class="bookmark-row" data-bookmark="github">
+                  <div class="bookmark-top"><span class="bookmark-symbol" aria-hidden="true"><i data-lucide="bookmark"></i></span><div class="bookmark-text"><a data-i18n-href="links.github" href="https://docs.github.com/en" target="_blank" rel="noopener noreferrer">GitHub Docs <i data-lucide="arrow-up-right" aria-hidden="true"></i></a><p class="bookmark-domain">docs.github.com</p></div></div>
+                  <div class="bookmark-tags" data-tags-for="github"></div>
+                </article>
+                <article class="bookmark-row" data-bookmark="chrome">
+                  <div class="bookmark-top"><span class="bookmark-symbol" aria-hidden="true"><i data-lucide="bookmark"></i></span><div class="bookmark-text"><a data-i18n-href="links.chrome" href="https://developer.chrome.com/docs/extensions?hl=en" target="_blank" rel="noopener noreferrer">Chrome Extensions <i data-lucide="arrow-up-right" aria-hidden="true"></i></a><p class="bookmark-domain">developer.chrome.com</p></div></div>
+                  <div class="bookmark-tags" data-tags-for="chrome"></div>
+                </article>
+                <p class="empty-state" id="empty-state" hidden><span data-i18n="emptyFirst">No matching sample bookmarks.</span><br><span data-i18n="emptySecond">Try another keyword or choose “All bookmarks”.</span></p>
+              </div>
+              <p class="live-feedback" id="tag-feedback" role="status"></p>
+            </div>
+            <aside class="agent-panel" data-i18n-aria-label="agentLabel" aria-label="Agent tagging demo">
+              <div class="agent-head"><span class="agent-symbol" aria-hidden="true"><i data-lucide="sparkles"></i></span><strong data-i18n="agentName">Tagging Agent</strong><span class="meta" data-i18n="concept">Concept demo</span></div>
+              <p class="agent-message"><span data-i18n="agentFirst">Saving is instinctive.</span><br><strong data-i18n="agentSecond">Organizing can have a helping hand.</strong></p>
+              <div class="agent-command"><span class="meta" data-i18n="commandLabel">Try this instruction</span><p><span data-i18n="commandFirst">“Add a ‘Technical docs’ tag</span><br><span data-i18n="commandSecond">to these documents.”</span></p></div>
+              <button type="button" class="btn btn-secondary agent-action" id="agent-add"><span id="agent-add-label">Demo: add tags</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></button>
+              <button type="button" class="btn btn-secondary agent-action" id="agent-undo" hidden><span data-i18n="agentUndo">Undo this change</span><i data-lucide="undo-2" aria-hidden="true"></i></button>
+              <p class="agent-result" id="agent-result" role="status" hidden></p>
+              <p class="agent-hint"><span data-i18n="agentHintFirst">A fixed demo, not a connected Agent.</span><br><span data-i18n="agentHintSecond">You can also click a tag to remove it.</span></p>
+            </aside>
+          </div>
+          <div class="preview-bottom"><span class="private-note"><i data-lucide="lock-keyhole" aria-hidden="true"></i><span data-i18n="privacy">Sample data only. Your Chrome bookmarks stay untouched.</span></span></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="clues">
+      <div class="container">
+        <div class="features-header"><div><p class="eyebrow" data-i18n="cluesEyebrow">ABOUT BMD</p><h2 data-i18n="cluesHeading">Save. Organize. Find.</h2></div><span class="meta" data-i18n="cluesNote">bookmarkdown. More than saving a URL.</span></div>
+        <div class="grid-3">
+          <article class="feature"><div class="feature-index"><span data-i18n="browserIndex">01 / Browser</span><i data-lucide="bookmark" aria-hidden="true"></i></div><h3 data-i18n="browserHeading">It starts with Chrome.</h3><p data-i18n="browserBody">Manage the links you want to keep, right in your familiar browser, through a Chrome extension.</p></article>
+          <article class="feature"><div class="feature-index"><span data-i18n="tagsIndex">02 / Tags</span><i data-lucide="tag" aria-hidden="true"></i></div><h3 data-i18n="tagsHeading">Organize with an Agent.</h3><p data-i18n="tagsBody">A helping hand to manage and add tags, bringing a little more order to your collection.</p></article>
+          <article class="feature"><div class="feature-index"><span data-i18n="nextIndex">03 / Search</span><i data-lucide="search" aria-hidden="true"></i></div><h3 data-i18n="nextHeading">Find what you saved.</h3><p data-i18n="nextBody">Search by title, domain, or tag, and filter your collection.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="section closing">
+      <div class="container"><p class="closing-label">BMD / bookmarkdown</p><h2 data-i18n="closingHeading">The story starts after you save.</h2><a class="btn btn-secondary" href="#preview"><span data-i18n="closingCta">Back to the preview</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
+    </section>
+  </main>
+  <footer class="pagefoot"><div class="container row-between"><span class="footer-brand"><strong>BMD</strong> bookmarkdown <span>© 2026</span></span><div class="footer-links"><a href="#top"><span data-i18n="backTop">Back to top</span><i data-lucide="arrow-up" aria-hidden="true"></i></a></div></div></footer>
+</body>
+</html>

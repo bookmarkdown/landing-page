@@ -1,0 +1,47 @@
+:root {
+  --bg: oklch(99% 0.002 240);
+  --surface: oklch(100% 0 0);
+  --fg: oklch(18% 0.012 250);
+  --muted: color-mix(in oklch, var(--bg) 64%, var(--fg));
+  --border: oklch(92% 0.005 250);
+  --accent: oklch(58% 0.18 255);
+  --rule: color-mix(in oklch, var(--border) 13%, var(--fg));
+  --font-display: 'Iowan Old Style', 'Charter', Georgia, 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', 'Microsoft JhengHei', system-ui, sans-serif;
+  --font-mono: ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+  --fs-h1: 76px;
+  --fs-h2: 40px;
+  --fs-h3: 22px;
+  --fs-body: 16px;
+  --fs-meta: 13px;
+  --gap-xs: 8px;
+  --gap-sm: 12px;
+  --gap-md: 20px;
+  --gap-lg: 32px;
+  --gap-xl: 56px;
+  --gap-2xl: 96px;
+  --container: 1184px;
+  --gutter: 32px;
+  --radius: 6px;
+  --radius-lg: 12px;
+  --shadow: none;
+  --motion-fast: 100ms;
+  --motion: 150ms;
+  --ease: ease;
+}
+
+@media (max-width: 1100px) {
+  :root { --fs-h1: 60px; }
+}
+
+@media (max-width: 920px) {
+  :root { --fs-h1: 48px; }
+}
+
+@media (max-width: 600px) {
+  :root { --gutter: 22px; --fs-h1: 38px; --fs-h2: 30px; }
+}
+
+@media (max-width: 374px) {
+  :root { --fs-h1: 33px; }
+}
